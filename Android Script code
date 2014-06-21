@@ -1,0 +1,62 @@
+// Simple serial transmit example for arduino . 
+// 
+// Note: this application only works on devices that support  
+// OTG and allow access to external serial devices. 
+// 
+// Known to work: Nexus7, GalaxyS3, ExperiaZUltra     
+// Don't work: Nexus4, GalaxyS1, GalaxyS4 
+
+//Called when application is started. 
+function OnStart() 
+{ 
+    //Create a layout with objects vertically centered. 
+    lay = app.CreateLayout( "linear", "VCenter,FillXY" );     
+
+    //Create a button 1/3 of screen width and 1/4 screen height. 
+    btn1 = app.CreateButton( "red led", 0.3, 0.25 ); 
+    btn2 = app.CreateButton( "white led", 0.3, 0.25 ); 
+    
+    lay.AddChild( btn1 );
+    lay.AddChild( btn2 ); 
+     
+    //Set function to call when button pressed. 
+    btn1.SetOnTouch( btn1_OnTouch ); 
+    btn2.SetOnTouch( btn2_OnTouch ); 
+    
+    //Add layout to app.     
+    app.AddLayout( lay ); 
+    app.AddLayout( lay ); 
+    
+    //Create USB serial object. 
+    usb = app.CreateUSBSerial(); 
+
+
+} 
+
+//Called when user touches our button. 
+function btn1_OnTouch() 
+{ 
+    //Send serial text to device. 
+    usb.Write( "f" );
+ } 
+
+
+function btn2_OnTouch() 
+{ 
+    //Send serial text to device. 
+    usb.Write( "s");
+ } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
