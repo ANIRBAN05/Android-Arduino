@@ -1,6 +1,6 @@
 
 // Written By Anirban Sengupta from Arduino Examples
-//this is opensource and for piblic use 
+//this is opensource and for public use 
 
 //Connect RED LED TO pin 13 
 //Connect WHITE LED to pin 12
