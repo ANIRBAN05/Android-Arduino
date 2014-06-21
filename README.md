@@ -11,5 +11,4 @@ tools required :
 
 3.Arduino Board!
 
-4. two different colour  Leds
-
+4 different colour LEDS
