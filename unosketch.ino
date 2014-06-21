@@ -1,5 +1,10 @@
 
 // Written By Anirban Sengupta from Arduino Examples
+//this is opensource and for piblic use 
+
+//Connect RED LED TO pin 13 
+//Connect WHITE LED to pin 12
+
 
 int led =13;
 int led2=12;
